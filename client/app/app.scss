@@ -11,3 +11,34 @@ main {
   color: #333;
 }
 
+input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  min-width: 200px;
+}
+
+button {
+  padding: 10px 12px;
+  font-size: 13px;
+  background-color: $primaryColor;
+  font-weight: bold;
+  color: #fff !important;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+table.todos {
+  width: 100%;
+  padding: 0;
+
+  tr {
+
+    border-bottom: 1px solid #ccc;
+
+    td {
+      padding: 10px 5px;
+    }
+  }
+}
+

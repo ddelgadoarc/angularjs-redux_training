@@ -8,7 +8,7 @@
             <button ng-click='$ctrl.redux.addTodo(todoText)'> Add Todo </button>
         </form>
 
-        <table>
+        <table class="todos">
             <tr ng-repeat="todo in $ctrl.getTodos()">
                 <td> {{ todo.text }} </td>
             </tr>

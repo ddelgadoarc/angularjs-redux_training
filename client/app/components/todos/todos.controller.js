@@ -21,6 +21,10 @@ class TodosController {
         };
     }
 
+    addTodo() {
+        console.log("Here");
+    }
+
     getTodos() {
 
         let state = this.$ngRedux.getState();
