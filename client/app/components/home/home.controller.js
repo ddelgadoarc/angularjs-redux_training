@@ -1,7 +1,29 @@
+import * as CounterActions from '../../actions/counter';
+
 class HomeController {
-  constructor() {
-    this.name = 'home';
+
+  constructor($ngRedux, $scope) {
+
+      "ngInject";
+
+      this.$scope = $scope;
+      this.$ngRedux = $ngRedux;
+      this.name = 'home Page';
+
+      let unsubscribe = $ngRedux.connect(this.mapStateToThis, CounterActions)(this);
+      $scope.$on('$destroy', unsubscribe);
   }
+
+  mapStateToThis(state) {
+
+      console.log(state);
+
+
+    return {
+        value: state.counter
+    };
+  }
+
 }
 
 export default HomeController;

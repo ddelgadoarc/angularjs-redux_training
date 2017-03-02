@@ -4,6 +4,10 @@
 </header>
 <main>
   <div>
-    <h1>Found in {{ $ctrl.name }}.html</h1>
+    <h1>Found in Test {{ $ctrl.name }}.html</h1>
+
+    <p>Clicked: {{$ctrl.counter.value}} times </p>
+    <button ng-click='$ctrl.mapStateToThis(8)'>+</button>
+
   </div>
 </main>
