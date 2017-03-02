@@ -1,0 +1,19 @@
+<navbar></navbar>
+<main>
+    <div>
+        <h1>{{ $ctrl.name }}</h1>
+
+        <form>
+            <input type="text" name="todo" ng-model="todoText" placeholder="Todo">
+            <button ng-click='$ctrl.redux.addTodo(todoText)'> Add Todo </button>
+        </form>
+
+        <table>
+            <tr ng-repeat="todo in $ctrl.getTodos()">
+                <td> {{ todo.text }} </td>
+            </tr>
+        </table>
+
+
+    </div>
+</main>

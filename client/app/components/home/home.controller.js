@@ -15,10 +15,6 @@ class HomeController {
   }
 
   mapStateToThis(state) {
-
-      console.log(state);
-
-
     return {
         value: state.counter
     };

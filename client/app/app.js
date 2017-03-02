@@ -24,13 +24,13 @@ angular.module('app', [
     // #how-to-configure-your-server-to-work-with-html5mode
     $locationProvider.html5Mode(true).hashPrefix('!');
 
-    //Redux
+    //Redux Config
     const logger = createLogger({
           level: 'info',
           collapsed: true
-      });
+    });
 
-    $ngReduxProvider.createStoreWith(reducers, [logger]);
+    $ngReduxProvider.createStoreWith(reducers, [thunk, logger]);
   })
 
   .component('app', AppComponent);

@@ -1,13 +1,21 @@
 @import '../common';
 
 .navbar {
-  height: 6.5rem;
   background-color: $primaryColor;
   padding: 1rem;
 
   .nav-links,
   .logo {
     display: inline-block;
+
+    h1 {
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: normal;
+        font-size: 20px;
+      }
+    }
   }
 
   .logo {
@@ -18,5 +26,19 @@
   .nav-links span {
     color: $lightTextColor;
     font-size: 1.6rem;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase;
+      padding: 0 10px;
+
+
+      &:nth-child(1) {
+        border-right: 1px solid #ddd;
+      }
+
+    }
   }
 }
