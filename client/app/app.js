@@ -5,7 +5,7 @@ import Components from './components/components';
 import AppComponent from './app.component';
 import 'normalize.css';
 import {combineReducers}  from 'redux';
-import reducers from './reducers';
+import reducers from './redux/reducers';
 import ngRedux from 'ng-redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';

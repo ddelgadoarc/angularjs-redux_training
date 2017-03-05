@@ -1,0 +1,40 @@
+<navbar></navbar>
+<main>
+    <div>
+        <h1>{{ $ctrl.name }}</h1>
+
+        <button type="button" ng-click="$ctrl.redux.getUsers()"> Get All Users </button>
+        <button type="button" ng-click="showCreateUser = true"> Create User </button>
+
+        <table class="todos">
+            <thead>
+            <th> Todo </th>
+            <th> Likes </th>
+            <th> Action </th>
+            </thead>
+            <tr ng-repeat="todo in $ctrl.getTodos()">
+                <td> {{ todo.text }} </td>
+                <td> {{ todo.likes }} </td>
+                <td> {{  }} </td>
+            </tr>
+        </table>
+
+
+        <div id="create-user-component" ng-show="showCreateUser">
+            <div class="content">
+                <div class="heading">
+                    <h3> New User </h3>
+                    <span class="close" ng-click="showCreateUser = false"> x </span>
+                </div>
+                <div class="body">
+                    <form ng-submit="$ctrl.addUser(user)">
+                        <input type="text" name="firstName" ng-model="user.firstName" placeholder="First Name">
+                        <input type="text" name="lastName" ng-model="user.lastName" placeholder="Last Name">
+                        <button type="submit"> Save </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
